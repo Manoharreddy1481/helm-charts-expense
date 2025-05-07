@@ -24,4 +24,22 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: {{.Values.deployment.imageVersion}}
+        image: manohar1481/mysql:{{.Values.deployment.imageVersion}}
+---
+apiVersion: v1 
+kind: Service
+metadata:
+  name: mysql
+  namespace: expense
+spec:
+  selector:
+    app: mysql
+    tier: db
+    project: expense
+  ports:
+  - name: mysql-db-port
+    protocol: TCP
+    port: 3306
+    targetPort: 3306
+
+
