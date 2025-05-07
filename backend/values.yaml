@@ -1,6 +1,4 @@
 deployment:
-  imageVersion: manohar1481/backend:v1
+  imageVersion: v1
   replicas: 2
-service:
-  port: 8080
-  targetPort: 8080
+
