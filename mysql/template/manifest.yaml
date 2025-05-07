@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: manohar1481/mysql:{{.Values.deployment.imageVersion}}
+        image: manohar1481/mysql:{{ .Values.deployment.imageVersion }}
 ---
 apiVersion: v1 
 kind: Service
