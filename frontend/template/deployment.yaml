@@ -16,7 +16,7 @@ metadata:
     tier: web 
     project: expense
 spec:
-  replicas: 3
+  replicas: {{.Values.deployment.replicas}}
   selector:
     matchLabels:
       app: frontend
@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: manohar1481/frontend:v1
+        image: {{.Values.deployment.imageVersion}}
         envFrom:
         - configMapRef:
             name: frontend

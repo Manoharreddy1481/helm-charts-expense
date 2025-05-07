@@ -1,0 +1,7 @@
+deployment:
+  imageVersion: manohar1481/frontend:v1
+  replicas: 3
+service:
+  port: 80
+  targetPort: 80
+  service_type: LoadBalancer
