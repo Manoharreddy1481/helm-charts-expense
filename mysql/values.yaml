@@ -1,0 +1,6 @@
+deployment:
+  imageVersion: manohar1481/mysql:v1
+  replicas: 1
+service:
+  port: 3306
+  targetPort: 3306
