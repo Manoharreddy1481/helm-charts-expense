@@ -1,0 +1,14 @@
+apiVersion: v1 
+kind: Service
+metadata:
+  name: nginx
+spec:
+  type: {.Values.service.type}
+  selector:
+    app: nginx
+    tier: frontend
+  ports:
+  - name: nginx-deployment-svc
+    protocol: TCP
+    port: 80
+    targetPort: {{.Values.service.targetPort}}
